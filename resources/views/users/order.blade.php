@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="w-full flex items-center max-h-screen">
-<div class="w-1/6  h-screen dark:bg-gray-900 text-white font-semibold text-xl">
+<div class="w-1/6  h-screen dark:bg-gray-900 text-white font-semibold text-xl" style="position: fixed;top:55px;bottom:0;">
       <ul class="space-y-2">
          <li>
             <a href="{{ route('claim')}}" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
@@ -24,9 +24,9 @@
 
 </div>
 <div class="w-5/6">
-   <h2 class="text-gray-500 font-bold text-center m-2">Requisition form</h2>
+   <h2 class="text-gray-500 font-bold text-center ml-96 mt-44">Requisition form</h2>
 
-    <div class="w-2/5 shadow mx-auto p-4 mt-4">
+    <div class="w-2/5 shadow  p-4 mt-4" style="margin-left: 50%;">
       
  <form  action="{{ route('order' )}}" method="POST" >
    @csrf

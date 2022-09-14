@@ -35,11 +35,14 @@ Route::get('/register', [UserController::class, 'index'])->name('register');
 Route::post('/register', [UserController::class, 'store']);
 
 //Employee claims routes
-Route::get('/employee/claim', [RequisitionController::class, 'index'])->name('claim');
+Route::get('/employee/dashboard', [RequisitionController::class, 'index'])->name('claim');
 
 Route::get('/employee/claim/request', [RequisitionController::class, 'edit'])->name('order');
 Route::post('/employee/claim/request', [RequisitionController::class, 'store']);
 
+//Route::get('/employee/login', [LoginClientController::class, 'index'])->name('loginUser')->middleware('employee');
+Route::get('/employee/login', 'App\Http\Controllers\LoginClientController@index')->name('loginUser');
+Route::post('/employee/login', 'App\Http\Controllers\LoginClientController@store');
 
 ///add employees
 Route::get('/manage/add', [EmployeeController::class, 'index'])->name('employee');

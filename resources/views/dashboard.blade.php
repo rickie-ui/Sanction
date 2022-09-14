@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="w-full flex items-center min-h-screen">
-<div class="w-1/6 min-h-screen dark:bg-gray-900 text-white font-semibold text-xl p-4">
+<div class="w-1/6 min-h-screen dark:bg-gray-900 text-white font-semibold text-xl p-4" >
       <ul class="space-y-2">
          <li>
             <a href="{{ route('dashboard') }}" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">

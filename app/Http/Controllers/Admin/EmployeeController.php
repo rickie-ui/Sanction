@@ -17,19 +17,19 @@ class EmployeeController extends Controller
     }
 
     public function store(Request $request){
-        $formFields = $request->validate([
-                'fname' => 'required|max:255',
-                'lname' => 'required|max:255',
-                'email' => 'required|email|max:255',
-                'phone' => 'required|integer',
-                'idnumber' => 'required|integer',
-                'department' => 'required',
-              ]);
+        // $formFields = $request->validate([
+        //         'fname' => 'required|max:255',
+        //         'lname' => 'required|max:255',
+        //         'email' => 'required|email|max:255',
+        //         'phone' => 'required|integer',
+        //         'idnumber' => 'required|integer',
+        //         'department' => 'required',
+        //       ]);
 
-              $pass = '12345678';
-              $formFields['password'] = bcrypt($pass);
+        //       $pass = '12345678';
+        //       $formFields['password'] = bcrypt($pass);
 
-              Employee::create($formFields);
+        //       Employee::create($formFields);
 
               return redirect()->route('employee');
     }
